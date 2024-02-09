@@ -4,57 +4,58 @@ This simple JS script allows you to easily create directory structures based on 
 
 ## Usage
 
-1. **Installation**: Place the script in the root folder or follow these [steps](#steps) to run the script by simply typing the custom command (e.g., createDir) in the terminal.
+1. **Installation**: Place the script in the root folder or follow [these steps](#steps) to run the script by simply typing the custom command (e.g., createDir) in the terminal.
 
 2. **Input Format**: Specify the desired directory structure using a custom syntax.
 
-   - Each entry is on a separate line, denoting either a file or a folder. Entries without extensions (e.g. - .js, .txt, .ts, .py, etc.) are considered folders. Use indents to indicate hierarchy.
+   - Each entry is on a separate line, denoting either a file or a folder.
+   - Entries without extensions (e.g. - .js, .txt, .ts, .py, etc.) are considered folders.
+   - Use indents to indicate hierarchy.
    - Example:
 
-   ```bash
-    folder1
-    folder2
-      subfolder
-        file1.js
-        file2.js
-    file1.txt
-    file3.js
-    :q
-   ```
-
-   Enter `:q` to exit the input.
+     ```bash
+      folder1
+        sample.py
+      folder2
+        subfolder1
+          file1.js
+          file2.js
+      file3.txt
+      file4.md
+     ```
 
 3. **Run the Script**:
 
    - If reading from stdin:
 
-   ```bash
-   node script.js -t    #'t' stands for terminal
-   ```
+     ```bash
+      node script.js -t    #'t' stands for terminal
+     ```
 
-    Enter folder or file names, one per line, and press Enter to move to new line to type a new file/folder. When finished, type `:q` and press Enter.
+     Enter folder or file names, one per line, and press Enter to move to new line to type a new file/folder.
+
+     When finished, type `:q` and press Enter.
+
+     ```bash
+      folder1
+        sample.py
+      folder2
+        subfolder1
+          file1.js
+          file2.js
+      file3.txt
+      file4.md
+     :q
+     ```
 
    - If reading from a file:
      Create a text file (e.g., input.txt) in the root folder, paste your directory structure, and then run:
 
-   ```bash
-   node script.js input.txt
-   ```
+     ```bash
+     node script.js input.txt
+     ```
 
-   The script will create the specified directories and files in the current working directory.
-
-Examples -
-
-To create a basic structure with folders and a file:
-
-  ```bash
-  folder1
-    example.js
-  folder2
-    subfolder1
-      example2.js
-  file1.txt
-  ```
+     The script will create the specified directories and files in the current working directory.
 
 ## Steps to Create a Command <a id="steps"></a>
 
@@ -110,14 +111,14 @@ Example:
 
 - From terminal
 
-```bash
-createDir -t
-```
+  ```bash
+  createDir -t
+  ```
 
 - From text file
 
-```bash
-createDir input.txt
-```
+  ```bash
+  createDir input.txt
+  ```
 
 Feel free to modify and adapt the script to suit your needs. Happy coding!
